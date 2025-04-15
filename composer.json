@@ -1,0 +1,44 @@
+{
+    "name": "terminal42/contao-litespeed-cache",
+    "description": "This package integrates the LiteSpeed WebServer HTTP Cache with the Contao Open Source CMS",
+    "keywords": ["contao", "cache", "litespeed", "lscache"],
+    "type": "contao-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yanick Witschi",
+            "email": "yanick.witschi@terminal42.ch"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "contao/core-bundle": "^5.3"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "contao/test-case": "^5.0",
+        "phpunit/phpunit": "^9.6",
+        "terminal42/contao-build-tools": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Terminal42\\ContaoLiteSpeedCache\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Terminal42\\ContaoLiteSpeedCache\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Terminal42\\ContaoLiteSpeedCache\\ContaoManager\\Plugin"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": false,
+            "contao/manager-plugin": false,
+            "php-http/discovery": false,
+            "terminal42/contao-build-tools": true
+        }
+    }
+}
